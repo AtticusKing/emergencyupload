@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureGoogle Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="intro-page" class="intro-page">
+        <h1>The year is now 2041</h1>
+    </div>
+
+    <div class="browser" style="display:none;">
+        <div class="browser-bar">
+            <button class="nav-button" onclick="goBack()">&#8592;</button>
+            <button class="nav-button" onclick="goForward()">&#8594;</button>
+            <input type="text" id="address-bar" readonly>
+        </div>
+        <div class="tabs">
+            <button class="tab-link" onclick="openTab(event, 'search')">Search</button>
+            <button class="tab-link" onclick="openTab(event, 'article')">Article</button>
+            <button class="tab-link" onclick="openTab(event, 'news')">News</button>
+            <button class="tab-link" onclick="openTab(event, 'clock')">Clock</button>
+        </div>
+
+        <div id="search" class="tab-content">
+            <div class="container">
+                <div class="logo">
+                    <h1>FutureGoogle</h1>
+                </div>
+                <div class="search-bar">
+                    <form id="search-form" onsubmit="performSearch(event)">
+                        <input type="text" id="search-input" class="search-input" readonly
+                            placeholder="Search FutureGoogle or type a URL"
+                            value="a timeline of inventions before 2041">
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="article" class="tab-content">
+            <div class="container">
+                <h1>Forbes</h1>
+                <div class="scroll-bar-wrap">
+                    <div class="scroll-box">
+                        <h2>5 Technologies You’ll Certainly See By 2050!</h2>
+                        <h3>E.B. Metzel</h3>
+                        <h4>Mar 8, 2041</h4>
+                        <p id="ph5">We predict these five technologies will be created within the next nine years. Some
+                            already exist, though we expect they'll only grow in prevalence by 2050, the others you’ve
+                            never heard of. So prepare to be amazed, and let's jump in!</p>
+
+                        <ul>
+                            <li>
+                                <h3>1. Efficient Humanoid Robotics</h3>
+                                <p class="articlePs">For the last hundred years, people have been theorizing, imagining,
+                                    and inventing humanoid robots, but none have come as close to reality as Solution
+                                    Rocarst. This industry leader resulted from a merger of Boston Dynamics and
+                                    state-sponsored company Eastern Mechware, both prior leaders in respective fields
+                                    regarding robotic outer shells and living electric minds. The combination, merged
+                                    only last year in 2040, has already created fruitful results. We can’t even imagine
+                                    what the next ten years of humanoid technological advancement will bring.</p>
+                                <p class="articlePs">We recognize the concerns about potential job displacement,
+                                    particularly in factory lines or manual labor. However, history has shown us that
+                                    new technologies can integrate smoothly into society without causing significant
+                                    upheaval. Take self-driving vehicles and generative art, for example. These
+                                    innovations were initially met with apprehension, but they ultimately created new
+                                    job opportunities in tech support, maintenance, and creative industries.
+                                    Additionally, governments and companies prioritized a gradual integration process,
+                                    ensuring workers had time to retrain and adapt. By focusing on complementary roles
+                                    and enhancing human capabilities, these technologies demonstrated once again that
+                                    progress and job security could coexist.</p>
+                            </li>
+
+                            <li>
+                                <h3>2. Synthetic Memory</h3>
+                                <p class="articlePs">Recent technologies have proven that there is no reason why
+                                    memories can’t be created or destroyed, so our experts are predicting a cheap cost
+                                    for the creation of synthetic memory by the year 2050. Already, the first tests on
+                                    rats and smaller rodents have been showing fascinating results. Scientists have
+                                    successfully made a number of rats afraid of eating after implanting synthetic
+                                    memories of food retaliation or previous poison experience. In a successful study in
+                                    Copenhagen, a rat named Lulu seemed to think she was human and received a fairly
+                                    high IQ rating after being implanted with the synthetic memories of a human child.
+                                    If you’ve ever wanted to live ten lifetimes in your one or justify an irrational
+                                    phobia with a synthetic memory, stick around until 2050, because things are about to
+                                    get interesting.</p>
+                            </li>
+
+                            <li>
+                                <h3>3. De-aging</h3>
+                                <p class="articlePs">Throughout human history, aging has been a crucial problem to
+                                    general health quality. While near-immortality is certainly not only nine years
+                                    away, scientists have been theorizing about the possibility of reducing cell aging
+                                    to live slightly longer lives and reduce the effects of older age, such as loss of
+                                    memory, poor movement, and diminished eyesight. The strides we are seeing today
+                                    suggest that by 2050, de-aging technologies will become as common as today's fitness
+                                    trackers, providing us all with a healthier, more vibrant older age.</p>
+                            </li>
+                            <li>
+                                <h3>4. Advanced Artificial Intelligence</h3>
+                                <p class="articlePs">By 2050, we anticipate the arrival of truly intelligent artificial
+                                    minds that can think and learn independently, surpassing today's advanced yet still
+                                    limited systems. These AI entities will interact with humans on a deeper, more
+                                    intuitive level, capable of understanding and responding to complex emotions and
+                                    abstract concepts. The integration of true AI minds will revolutionize industries,
+                                    from personalized education to advanced medical diagnostics, making what we once
+                                    thought of as science fiction an everyday reality.</p>
+                            </li>
+                            <li>
+                                <h3>5. Quantum Fabrication</h3>
+                                <p class="articlePs">This might sound like something out of a sci-fi novel, but our
+                                    experts predict that by 2050, we'll see the rise of quantum fabrication technology.
+                                    Imagine being able to assemble materials at the atomic level, creating products with
+                                    unprecedented precision and efficiency. From clothing that adapts to your body
+                                    temperature to self-repairing building materials, quantum fabrication will redefine
+                                    manufacturing and open up possibilities we can't yet fully envision. This technology
+                                    promises to bring a new era of innovation, reducing waste and enhancing the
+                                    sustainability of our production processes.</p>
+                            </li>
+                            <li class="final-li">
+                                <p class="articlePs">As we approach 2050, the horizon of technological advancement seems
+                                    boundless. These
+                                    upcoming innovations not only promise to transform our daily lives but also
+                                    challenge us to rethink our relationship with technology itself. Stay tuned, because
+                                    the future is closer than you think!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cover-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="news" class="tab-content">
+            <div class="container">
+                <h1>The New York Times</h1>
+                <div class="content">
+                    <div class="collumns">
+                        <div class="collumn">
+                            <div class="head"><span class="headline hl3">DARKNESS IN THE AMERICAS</span>
+                                <p><span class="headline hl8">War! War! War!</span></p>
+                            </div>
+                            <p class="newsP">The war in South America has begun threatening American interests in
+                                the Southwestern
+                                Caribbean, which will likely prompt United States involvement. After nearly three years
+                                of
+                                withholding support, we have begun an under the table lend-lease deal with northern
+                                countries Columbia
+                                and
+                                Panama. Possibly as a slow integration into the war, and bolstering of likely allies.
+                            </p>
+
+                            <div class="head"><span class="headline hl7">TECHNOLOGICAL INTEGRATION</span>
+                                <p><span class="headline hl8">A Reflection on A.I. in the Early ‘20s</span></p>
+                            </div>
+                            <p class="newsP">It's interesting to see how much our perception of "Artificial
+                                Intelligence" has evolved. Back then, what was called AI was essentially advanced
+                                retrieval programs, impressive but far from the true intelligence we see today in 2041.
+                                It can be said, the term "intelligence" was premature, sparking unnecessary fear and
+                                debate about job loss and ethics when the technology was still in its infancy.
+                            </p>
+                            <p class="newsP">
+                                Today, intelligent systems are seamlessly integrated into our daily routines, managing
+                                everything from energy use to personal schedules. They've become as unremarkable and
+                                essential as the internet or autonomous transport networks, both of which also faced
+                                initial skepticism and fear before becoming indispensable. The integration of AI has
+                                followed a similar path, moving from controversy to normalcy as people realized its
+                                potential to enhance rather than disrupt our lives.
+                            </p>
+                            <p class="newsP">
+                                The apprehension and controversy that once surrounded AI have largely faded. These
+                                systems are no longer viewed as a threat but as essential tools that improve our quality
+                                of life. It's a reminder of how technologies that once seemed daunting can become an
+                                accepted and vital part of our world, highlighting the human ability to adapt and
+                                embrace innovation over time.
+                            </p>
+                        </div>
+                        <div class="collumn">
+                            <div class="head"><span class="headline hl5">ASTEROID MINING BEGINS</span>
+                                <p><span class="headline hl6">The Threat to Global Economy</span></p>
+                            </div>
+                            <p class="newsP">In other news, Intergold Space Company and Austion Meyworks Trading have
+                                begun releasing
+                                their screened products to market. Both obtained large quantities of the interstellar
+                                asteroid C-158, made of a high concentration of gold, titanium alloy, and lesser
+                                minerals.
+                                Both companies also employed extensive screening of the materials to ascertain potential
+                                dangers and possible unique properties but ultimately have decided to release on no
+                                special
+                                basis.
+                            </p>
+                            <p class="newsP">
+                                This marks a fascinating moment in human evolution and technological
+                                advancement as
+                                many other companies surge to get their feet, hands, and rockets in the market door.
+                                Possible government regulatory action- as seen in the case of Artificial Intelligence in
+                                2026 and internet monopolies in 2038- might be necessary in order to prevent the
+                                inflation
+                                of precious metals and subsequent downturn of U.S. economy.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="clock" class="tab-content">
+            <div class="container">
+                <h1>Local Time</h1>
+                <p id="clock-display">--:--:--</p>
+                <p id="date-display"></p>
+            </div>
+        </div>
+
+        <div id="results" class="tab-content">
+            <div class="container">
+                <h1>Search Results</h1>
+                <p id="results-content">Your search results will appear here.</p>
+                <section class="timeline">
+                    <ol>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1439</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Printing Press</h3>
+                                    <h4>by Johannes Gutenberg</h4>
+                                    <p class="push-top">The printing press revolutionized the production of books,
+                                        making them more
+                                        accessible and affordable. However, there were fears that it would lead to the
+                                        spread of misinformation and that scribes and illuminators would lose their
+                                        jobs. Today, the printing press is seen as a cornerstone of the modern knowledge
+                                        economy, facilitating the dissemination of information and literacy.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1589</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Stocking Frame</h3>
+                                    <h4>by William Lee</h4>
+                                    <p class="push-top">The stocking frame mechanized the knitting process, greatly
+                                        increasing production speed. Seamstresses and knitters feared job losses and
+                                        protested against the machine. Eventually, it became an essential tool in
+                                        textile manufacturing, integrating seamlessly into the industry and creating
+                                        more jobs in machine maintenance and operation.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1608</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Telescope</h3>
+                                    <h4>by Hans Lippershey</h4>
+                                    <p class="push-top">The telescope allowed for unprecedented observation of the stars
+                                        and planets, which challenged existing astronomical beliefs and religious views.
+                                        Some feared it would undermine the church's teachings. Today, it is a
+                                        fundamental instrument in astronomy and has led to countless discoveries about
+                                        our universe.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1620</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Compound Microscope</h3>
+                                    <h4>by Zacharias Janssen</h4>
+                                    <p class="push-top">The compound microscope enabled scientists to observe
+                                        microorganisms, which led to significant advancements in biology and medicine.
+                                        Initially, there was skepticism and fear that it would show all that is possible
+                                        to see of the microscopic world and remove all mystery. It has since become a
+                                        critical tool in scientific research and medical diagnostics.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1765</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Steam Engine</h3>
+                                    <h4>by James Watt</h4>
+                                    <p class="push-top">The improved steam engine powered the Industrial Revolution,
+                                        transforming industries and transportation. There was fear that it would
+                                        displace many manual labor jobs and lead to widespread unemployment. Over time,
+                                        it created new industries and job opportunities, becoming a key driver of
+                                        economic growth.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1789</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Power Loom</h3>
+                                    <h4>by Edmund Cartwright</h4>
+                                    <p class="push-top">The power loom mechanized weaving, increasing production
+                                        efficiency. Weavers feared massive job losses and organized violent protests.
+                                        Eventually, the power loom became an integral part of textile manufacturing,
+                                        increasing productivity and lowering the cost of goods.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1837</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Telegraph</h3>
+                                    <h4>by Samuel Morse</h4>
+                                    <p class="push-top">The telegraph revolutionized long-distance communication,
+                                        enabling instant message transmission. There were fears that it would lead to
+                                        espionage and loss of privacy. Today, it is regarded as a precursor to modern
+                                        communication technologies, paving the way for the internet and mobile
+                                        communication.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1856</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Bessemer Process</h3>
+                                    <h4>by Henry Bessemer</h4>
+                                    <p class="push-top">The Bessemer process allowed for the mass production of steel,
+                                        reducing costs and increasing availability. Ironworkers feared job losses and
+                                        wage reductions. It became essential in building infrastructure, from railways
+                                        to skyscrapers, significantly advancing industrial capabilities.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1928</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Penicillin</h3>
+                                    <h4>by Alexander Fleming</h4>
+                                    <p class="push-top">The discovery of penicillin revolutionized medicine by
+                                        introducing antibiotics. There was initial skepticism about its effectiveness
+                                        and concerns about antibiotic resistance. It has saved countless lives and
+                                        transformed medical treatment of bacterial infections.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>1945</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Atomic Bomb</h3>
+                                    <h4>by J. Robert Oppenheimer</h4>
+                                    <p class="push-top">The development of the atomic bomb introduced extreme fears of
+                                        nuclear war and annihilation. Despite this, nuclear technology has also been
+                                        harnessed for peaceful and incredible purposes, such as energy production and
+                                        medical treatments.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>2009</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Blockchain</h3>
+                                    <h4>by Satoshi Nakamoto</h4>
+                                    <p class="push-top">Blockchain technology underpins cryptocurrencies and introduces
+                                        new methods of secure, decentralized transactions. Initially, there were
+                                        concerns about its use in illegal activities and financial instability.
+                                        Blockchain is now seen as a transformative technology with applications in
+                                        finance, supply chain, and data security.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>2027</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Quantum Neural Network</h3>
+                                    <h4>by Aiden Thompson</h4>
+                                    <p class="push-top">The Quantum Neural Network (QNN) combines quantum computing with
+                                        artificial neural networks, vastly accelerating machine learning capabilities.
+                                        Initially, there were fears that this technology could surpass human
+                                        intelligence, leading to potential job displacement and ethical concerns about
+                                        AI autonomy. Over time, QNN has been integrated into various industries,
+                                        enhancing problem-solving and decision-making processes without completely
+                                        replacing human roles.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>2033</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Fusion Power Plant</h3>
+                                    <h4>by Jackson Everett</h4>
+                                    <p class="push-top">The first commercially viable fusion power plant comes online,
+                                        providing an almost limitless source of clean energy. Initial fears centered
+                                        around the safety of fusion reactions and the potential for catastrophic
+                                        failure. However, rigorous safety measures and successful operation have
+                                        demonstrated its potential to drastically reduce reliance on fossil fuels and
+                                        mitigate climate change, positioning fusion energy as a cornerstone of global
+                                        energy policy.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-inner">
+                                <div class="time-wrapper">
+                                    <time>2039</time>
+                                </div>
+                                <div class="details">
+                                    <h3>Universal Translator Implant</h3>
+                                    <h4>by Avery Monroe</h4>
+                                    <p class="push-top">The Universal Translator Implant allows real-time translation of
+                                        any spoken language directly into the brain. Early concerns included the ethical
+                                        implications of brain implants, privacy issues, and the potential for misuse in
+                                        espionage. Despite these concerns, the technology has revolutionized global
+                                        communication, enabling seamless interaction across language barriers and
+                                        fostering greater cultural exchange and understanding.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
